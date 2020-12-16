@@ -33,8 +33,17 @@ public class Index extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		String user = request.getParameter("user");
+		String pass = request.getParameter("pass");
+		
+		if (user.equals("Robin") && pass.equals("1234")) {
+			response.getWriter().append("Bonjour " + user);
+		}
+		else {
+			response.getWriter().append("Mauvais identifiants (user : "+ user +", pass : "+pass+")");
+		}
+		
 	}
 
 }
