@@ -38,9 +38,9 @@ public class Index extends HttpServlet {
 		String pass = request.getParameter("pass");
 		
 		if (user.equals("Robin") && pass.equals("1234")) {
-			response.getWriter().append("Bonjour " + user);
+			response.getWriter().append("Bonjour " + user); 
 		}
-		else {
+		else { 
 			response.getWriter().append("Mauvais identifiants (user : "+ user +", pass : "+pass+")");
 		}
 		
