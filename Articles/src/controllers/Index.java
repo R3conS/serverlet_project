@@ -37,7 +37,7 @@ public class Index extends HttpServlet {
 		String user = request.getParameter("user");
 		String pass = request.getParameter("pass");
 		
-		if (user.equals("Robin") && pass.equals("1234")) {
+		if (user.equals("Robin") && pass.equals("1234")) { 
 			response.getWriter().append("Bonjour " + user);
 		}
 		else {
